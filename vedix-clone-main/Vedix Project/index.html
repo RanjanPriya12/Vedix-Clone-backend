@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <title>Vedix Website Clone</title>
+    <link rel="stylesheet" href="./styles/footer.css">
+   
+    <style>
+       
+       
+        #nav1{
+            height: 50px;
+            background-color: rgb(211, 186, 151);
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid none;
+            margin-top: -8px;
+            width: 100%;
+            margin-left: -8px;
+        }
+        #nav1>div{
+        
+            border:1px solid none ;
+            margin-left: 35%;
+            height: 80%;
+            display: flex;
+        }
+        #nav1>div>p{
+            margin-top: 14px;
+        }
+        #nav2{
+            height: 50px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 65% 10% 11% 5% 2%;
+            justify-content: space-around;
+            border: 1px solid none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        #navbutton{
+            background-color: rgb(226, 130, 95);
+            height: 30px;
+            margin-top: 11px;
+            border: 1px solid  black;
+            width: 90px;
+            color: aliceblue;
+            margin-left: 10px;
+        }
+        #select{
+            height: 35px;
+            width: 75px;
+            background-color: rgb(229, 214, 190);
+            border: 1px solid black ;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.8px;
+            text-align: center;
+        }
+        #select1{
+            height: 35px;
+            width: 75px;
+            background-color: rgb(229, 214, 190);
+            border: 1px solid black ;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.8px;
+            text-align: center;
+        }
+        .lock{
+            border: 1px solid black;
+            height: 32px;
+            width: 31px;
+            margin-top: 2px;
+        }
+        .lock>img{
+            margin-left: 6px;
+            width: 65%;
+            margin-top: 4px;
+        }
+      
+        .cart{
+            border: 1px solid black;
+            height: 32px;
+            width: 31px;
+            margin-top: 2px;
+        }
+        .cart>img{
+            margin-left: 6px;
+            width: 65%;
+            margin-top: 4px;
+        }
+        #nav2>div:nth-child(1){
+             margin-left: 10px;
+             border: 1px solid none;
+        }
+
+        #nav2>div:nth-child(2){
+             border: 1.5px solid black;
+             height: 32px;
+             margin-top: 2px;
+             text-align: center;
+             padding: 0px 4px;
+        }
+        #nav2>div:nth-child(3){
+             border: 1.5px solid black;
+             height: 32px;
+             margin-top: 2px;
+             text-align: center;
+        }
+        #nav2>div:nth-child(2)>p{
+         margin-top: 5px;
+        }
+        #nav2>div:nth-child(3)>p{
+          margin-top: 5px;
+
+        }
+        #nav2>div:nth-child(5){
+            
+            display: none;
+       }
+       #quiz5{
+           border: 1px solid black;
+           height: 17px;
+           width: 90%;
+           margin-top: 0px;
+           padding: 10px;
+
+       }
+       #bottomnav{
+           height: 60px;
+           background-color: rgb(235, 226, 226);
+           display: grid;
+           grid-template-columns: 4% 7% 5% 5% 5% 3% 4% 36% 10% 10% ;  
+           gap: 13px;
+           margin-left: -8px;
+           position: fixed; 
+           bottom: 0;
+           width: 100%;
+       }
+     
+       #bottomnav>div{
+             margin-top: 12px;
+           margin-left: 15px;
+           font-size: 13px;
+           font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          border: 1px solid none;
+        }
+       #bottomnav>div:nth-child(1){
+           margin-left: 27px;
+           border-bottom: 3px solid red;
+       } 
+
+     #a{
+
+       background-image: url("https://cdn.shopify.com/s/files/1/0037/7690/5283/files/vx_banner_home_d.jpg?v=1609309319");
+       background-repeat: no-repeat;
+        background-size: cover;
+        height: 450px;
+        width: 100%;
+        border:1px solid white;
+        background-position: center;
+          margin-top: 50px;
+        margin-bottom: 10px;
+     }
+#a1{
+    height: 80%;
+    border:1px solid white;
+    width: 35%;
+    margin-left: 65px;
+    font-size: 50px;
+    margin-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     letter-spacing: 1px;  
+}
+#a>div:nth-child(2){
+margin-left: 65px;
+font-size: 20px;
+margin-top: 30px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+width: 36%;
+}
+#a2{
+    border:  1px solid none;
+    width: 40%;
+    margin-left: 65px;
+    margin-top: 20px;
+    height: 45px;
+    display: flex;
+}
+#a2>button{
+    height: 45px;
+    width: 150px;
+    border-radius: 0%;
+    border:1px solid black;
+    background-color: rgb(226, 130, 95);
+    color: white;
+    font-weight:700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin-right: 3px;
+}
+
+#b{
+    background-image:url("https://cdn.shopify.com/s/files/1/0037/7690/5283/files/vxoilbackfreebie.png?v=1632221135");
+     background-repeat: no-repeat;
+     background-repeat: no-repeat;
+        background-size: cover;
+        height: 450px;
+        width: 100%;
+        border:1px solid white;
+        background-position: center;
+          margin-top: 100px;
+        margin-bottom: 10px;
+        display: flex;
+
+}
+#b1{
+    border :1px solid none;
+    height: 400px;
+    width: 440px;
+    margin-left: 105px;
+    margin-top: 40px;
+}#b1>img{
+    width: 100%;
+}
+#b2{
+    margin-left: 230px;
+    border:1px solid none;
+    height: 80%;
+    width: 74%;
+    margin-top: 50px;
+
+}
+#b2 >p{
+margin-top: 40px;
+font-size: 34px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 600;
+}
+#b2 >p:nth-child(2){
+margin-top: 0%;
+font-size: 40px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+letter-spacing: 1px;
+text-shadow: rgb(133, 96, 96);
+}
+#b2>button{
+
+height: 50px;
+width: 200px;
+background-color: rgb(226, 130, 95);
+border: 1px solid black;
+color: blanchedalmond;
+font-size: 15px;
+font-weight: 700;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+#c,#d{
+    display: grid;
+    grid-template-columns: 53% 34%;
+    letter-spacing: .5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+#c,#d>div:nth-child(2){
+    margin-top: 50px;
+}
+#e{
+    background-color: rgb(255, 245, 246);
+    height: 540px;
+}
+#e1>div{
+    display:grid;
+    grid-template-columns:11% 40%;
+    gap: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 10px;
+    text-align: justify;
+}
+#e1>div>div:nth-child(1){
+    color: pink;
+    border-right: 2px solid rgb(226, 130, 95);
+    font-size: 70px;
+    font-weight: 600;
+    margin-top: 2%;
+    width: 78px;
+}
+#e>div:nth-child(1){
+    text-align: center;
+    color: rgb(85, 83, 83);
+    margin-top: 0px;
+}
+#e1>div:nth-child(2){
+margin-left: 30%;
+color: gray;
+}
+#e1>div:nth-child(3)>div:nth-child(2){
+margin-left: 5%;
+width: 500px;
+border: 1px solid none;
+
+}
+#e1>div:nth-child(3){
+margin-left: 50%;
+color: gray;
+}
+#e1>div:nth-child(1)>div:nth-child(1){
+    margin-left:1%;
+    margin-left:50px;
+}
+#e1>div:nth-child(1){
+    color: gray;
+}
+
+#e1>div>div:nth-child(2)>p:nth-child(1){
+font-size: 20px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+letter-spacing: .6px;
+
+
+}#f{
+
+    margin-top: 4%;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap :10px;
+    border: 1px solid none;
+    margin-left: 10%;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        letter-spacing: .6px;
+        color: rgb(56, 54, 54);
+
+}
+#f>div:nth-child(1){
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border: 15px solid rgb(216, 212, 212);
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#p1{
+    font-size: 30px;
+}
+#p2{
+    font-size: 30px;
+
+}
+
+#p3{
+    font-size: 20px;
+}
+
+#p4{
+    font-size: 28px;
+    color: grey;
+}
+#g{
+    background-color: rgb(255, 246, 228);
+     height: 650px;
+     margin-top: 4%;
+}
+#g1{
+    display: grid;
+   grid-template-columns : 28% 28% 28%;
+    border: 1px solid none;
+    margin-left: 10%;
+    grid-template-rows: 450px;
+    text-align: center;
+    gap: 20px;
+    margin-top: 20px;
+}#g1>div>img{
+    width: 100%;
+    height: 100%;
+}#g1>div>p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-size: 17px;
+}
+#select{
+    background-color: white;
+    margin-top: 3px;
+}
+
+#select>select{
+    border-bottom: 1px solid grey;
+    
+}
+        @media screen and (min-width:0px) and (max-width:720px){
+            #b2{
+                display: none;
+            }
+#bottomnav{
+    display: none;
+}
+
+            #nav2>div:nth-child(1){
+             margin-left: 45px;
+             border: 1px solid none;
+        }
+        #nav1>div{
+        
+            border:1px solid none ;
+            margin-left: 25%;
+            height: 80%;
+            display: flex;
+        }
+        #nav2>div:nth-child(2){
+            
+             display: none;
+        }
+        #nav2>div:nth-child(3){
+            
+             display: none;
+        }
+        #nav2>div:nth-child(4){
+            
+            display: none;
+       }
+        #nav2>div:nth-child(5){
+            
+            display: flex;
+       }
+
+       .lock{
+            margin-left: 10px;
+            margin-left: 15px;
+        }
+    
+        #a{
+
+     background-image: url("https://cdn.shopify.com/s/files/1/0037/7690/5283/files/vx_banner_home_d.jpg?v=1609309319"); 
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 400px;
+     width: 100%;
+     border:1px solid white;
+     background-position: right;
+     margin-top: 50px;
+     margin-left: 30px;
+        }
+        #a1{
+            display: none;
+        }
+
+#a1>div{
+display: none;
+}
+#c{
+display:grid; 
+grid-template-columns: repeat(1,1fr);
+}
+#d{
+    display:grid; 
+grid-template-columns: repeat(1,1fr);
+}
+
+#e1>div:nth-child(3){
+margin-left: 50px;
+color: gray;
+}
+#e1>div:nth-child(2){
+margin-left: 50px;
+color: gray;
+}
+#e1>div:nth-child(3)>div:nth-child(2){
+    margin-left: 6%;
+width: 500px;
+border: 1px solid none;
+
+}
+#e1>div:nth-child(1)>div:nth-child(2){
+    margin-left: 24%;
+width: 500px;
+border: 1px solid none;
+
+}
+#e1>div:nth-child(2)>div:nth-child(2){
+    margin-left: 6%;
+width: 500px;
+border: 1px solid none;
+
+}
+#f{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+height: 660px;
+}
+#g{
+    height: 1600px;
+}
+#g1{
+display: grid;
+grid-template-columns: repeat(1,350px);
+grid-template-rows: 400px;
+margin-left: 25%;
+}
+
+#g1>div>img{
+    height: 80%;
+}
+}
+        
+
+    </style>
+</head>
+<body>
+<div id="navbar"></div>
+<div id="a">
+ <div id="a1">
+     <p>
+        India’s Only Customised Ayurvedic Hair & Skin Regimen</p>
+
+ </div>  
+  <div>Hair & Skin - Vedix products are customised for YOUR needs</div>
+  <div id="a2">
+      <button id="quiz3">
+          Know Your Hair
+        <i class="fas fa-angle-right"></i>
+      </button>
+      <button id="quiz">
+        <a href="quiz1.html" style="text-decoration:none;color:white;">
+          Know Your Skin
+          </a>
+          <i class="fas fa-angle-right"></i>
+      </button>
+  </div>
+</div>
+<div id="b">
+<div id="b1">
+    <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/vxhomefreebie.png?v=1632215816">
+
+</div>
+<div id="b2"> 
+<p> 
+    Your Customised Hair Care Regimen Now Comes With A Booster Oil Worth Rs.299
+</p>
+<p>FREE!</p>
+<button>
+    Your Hair Analysis
+    <i class="fas fa-angle-right"></i>
+</button>
+</div>
+</div>
+<div id="c">
+    <div>
+     <p style="font-size: 40px;">What Are Doshas?</p>  
+     <p>According to Ayurveda every person is born with a set of characteristics called as their Prakruti. </p>
+     <p>Prakruti consists of Tri Dosha (3 Doshas) namely, Vata, Pitta and Kapha, according to the Tridosha Theory.</p> 
+     <p>Vata represents the workings of Air and Ether energy, Pitta represents the functions of Fire energy and Kapha represents the operations of Water and Earth energy. The mechanism of these 5 energies regulate, direct, control and manage all the functions in one’s body.</p>
+    </div>
+    <div>
+        <img style="width: 90%;margin-top: 46px;"  src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/dosha-images.jpg?v=1595580913">
+    </div>
+</div>
+<div  id="d">
+    <div>
+        <img  style="width: 90%;" src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/vedix-hand-mockup.jpg?v=1591011281">
+    </div>
+<div>
+    <p style="font-size: 40px;">The Influence Of Doshas On The Human Body</p>
+    <p>As unique as your doshas are according to your Prakruti, your doshas do get elevated as you get older and get exposed to environmental changes. When the doshas are elevated, they create problems and diseases in areas of your body, in which they are present. Elevation of one dosha may suppress the progress of the other doshas in one’s body. This leads to further disturbance in your bodily functions.</p>
+    <p>To counter this, Vedix understands the state of elevated doshas in one’s body through the Vedix Dosha Assessment Questionnaire. Based on the inputs given by the user, Vedix uses herbs and natural essentials, which can specifically help in controlling the damage caused by the elevated doshas.</p>
+</div>
+</div>
+<div id="e">
+    <div style="font-size: 40px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        Vedix’s 3-step Solution To Your Concern
+    </div>
+   <div id="e1">
+ <div>
+     <div>
+      01
+     </div>
+     <div>
+         <p>Take The Vedix Dosha Assessment Questionnaire</p>
+         <p>Answer simple questions about your hair, skin and wellness to help us assess your Unique Dosha Profile</p>
+     </div>
+ </div>
+
+ <div>
+    <div>
+        02
+    </div>
+    <div>
+        <p>Get An Ayurvedic Doctor-Approved Dosha Analysis</p>
+        <p>The Vedix certified team of Ayurvedic doctors ensure that the ingredients that go into your custom regimen match your inputs given in the Vedix Dosha Assessment Questionnaire.</p>
+    </div>
+</div>
+
+<div>
+    <div>
+        03
+    </div>
+    <div>
+        <p>Order Your Custom Vedix Box</p>
+        <p>Choose a hair care kit that suits you and book your customised Vedix solution!</p>
+    </div>
+</div>
+
+   </div>
+</div>
+<div style="text-align: center;margin-top: 10px;font-size: 30px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    10,00,000+ Indians Like You Love Vedix!
+</div>
+<div id="f">
+<div>
+    <img style="border-radius: 50%; height: 100%;" id="side">
+</div>
+<div>
+    <p id="p1"></p>
+    <p id="p2" ></p>
+    <p id="p3" ></p>
+    <p id="p4" ></p>
+
+</div>
+</div>
+<div id="g">
+    <div style="text-align: center; font-size: 30px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Awards & Accolades
+    </div>
+    <div id="g1">
+    <div>
+<img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/cosmobrand1_1.png?v=1601538428">
+<p>Cosmopolitan Award:</p>
+<p>Best Breakthrough Product </p>
+    </div>
+
+    <div>
+<img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/enterprener.png?v=1596889363">
+<p>Entrepreneur Award:</p>
+<p>Best Ayurvedic Startup Of The Year </p>    
+</div>
+
+    <div>
+<img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/economicbrand_1.png?v=1601531187">
+<p>Economic Times Award:</p>   
+<p>Best Customised Ayurvedic Brand </p>
+</div>
+    </div>
+</div>
+<div id="footer"></div>
+
+
+
+</body>
+</html>
+<
+<script type="module" src="index.js"></script>
+

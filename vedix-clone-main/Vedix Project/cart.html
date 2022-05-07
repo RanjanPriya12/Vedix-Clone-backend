@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="styles/cart.css"/>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <div id="main-cart-container">
+        <div>
+            <h2>Your Cart</h2>
+        </div>
+        <div id="cart-container">
+        </div>
+        <div class="inner-bottom-content-s">
+            <div class="inner-flex-s">
+                <p id="totalDisplay"></p>
+                <button onclick="checkout()">CHECKOUT</button>
+            </div>
+            <div class="inner-check-s">
+                <a href="product.html">Continue Shopping</a>
+                <span class="icon-next-s"><i class="fas fa-angle-double-right"></i></span>
+            </div>
+       </div>
+    </div>
+    
+</body>
+</html>
+<script>
+     
+    let remove = document.getElementById("remove"); 
+
+    let parent = document.getElementById("cart-container");
+    
+    // let combos_cart = JSON.parse(localStorage.getItem("combos_cart"));
+ 
+        let combos_cart = localStorage.getItem("combos_cart");
+        if(!combos_cart) {
+
+            combos_cart=[];
+            localStorage.setItem("combos_cart",JSON.stringify(combos_cart));
+        }
+        else{
+            combos_cart=JSON.parse(combos_cart);
+        }
+
+        appendData(combos_cart);
+        
+      function appendData(combos_cart) {
+        
+       
+        document.getElementById("cart-container").innerHTML="";
+
+        combos_cart.forEach((elem,index) => {
+
+            let div = document.createElement("div");
+            div.setAttribute("class","main-Div-c")
+        
+            let upperDiv = document.createElement("div");
+            upperDiv.setAttribute("class","upperDiv")
+          
+            let lowerDiv = document.createElement("div");
+            lowerDiv.setAttribute("class","lowerDiv");
+        
+            let upperDiv_img = document.createElement("div");
+            upperDiv_img.setAttribute("class","image-div-s")
+            let upperDiv_content = document.createElement("div");
+            let upperDiv_remove = document.createElement("div");
+            upperDiv_remove.setAttribute("class","delete-div-s")
+            
+            let lowerDiv_quantity = document.createElement("div");
+            let lowerDiv_price = document.createElement("div");
+            let lowerDiv_Strikedprice = document.createElement("div");
+         
+            let Image = document.createElement("img");
+            Image.src=elem.image;
+            Image.setAttribute("width","100%");
+        
+            let description = document.createElement("p");
+            description.textContent=elem.title;
+        
+            let remove = document.createElement("div");
+            remove.innerHTML=`<i class="far fa-trash-alt"></i>`;
+            remove.addEventListener("click",function() {
+                deleteTask(combos_cart,index);
+                });
+        
+            let quantity = document.createElement("input");
+            quantity.setAttribute("type","number");
+            quantity.setAttribute("class","input-div");
+        
+            let strikedprice = document.createElement("p");
+            strikedprice.textContent="Rs."+elem.strickedPrice;
+            strikedprice.style.textDecoration="line-through"
+        
+            let Price = document.createElement("p");
+            Price.textContent="Rs."+elem.price;
+            
+        
+           upperDiv_img.append(Image);
+           upperDiv_content.append(description);
+           upperDiv_remove.append(remove);
+            
+           upperDiv.append(upperDiv_img,upperDiv_content,upperDiv_remove);
+           
+           lowerDiv_quantity.append(quantity);
+           lowerDiv_Strikedprice.append(strikedprice);
+           lowerDiv_price.append(Price);
+        
+           lowerDiv.append(lowerDiv_quantity,lowerDiv_Strikedprice,lowerDiv_price);
+        
+           div.append(upperDiv,lowerDiv);
+           parent.append(div);
+
+            });
+
+}
+    
+
+function deleteTask(combos_cart,index) {    
+    combos_cart.splice(index,1);
+    localStorage.setItem("combos_cart",JSON.stringify(combos_cart));
+    let updatedValue = JSON.parse(localStorage.getItem("combos_cart"));
+    appendData(updatedValue);
+    totalDisplay(total);
+    window.location.href="cart.html";
+}
+
+let total = combos_cart.reduce(function (acc, curr) {
+    return acc + curr.price;
+  }, 0);
+
+
+
+function totalDisplay(total) {
+
+    let totalDisplay = document.getElementById("totalDisplay");
+    totalDisplay.textContent = "Rs."+ total;
+    
+  }
+  totalDisplay(total);
+
+  function checkout(){
+    localStorage.setItem('price',JSON.stringify(total));
+    window.location.href='checkout.html';
+  }
+
+</script>

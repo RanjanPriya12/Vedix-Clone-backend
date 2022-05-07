@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #a{
+             font-size: 15px;
+             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+             letter-spacing: 1px;
+             margin-left: 10%;
+             margin-right: 12%;
+             text-align: justify;
+         }
+         #table{
+             display: grid;
+             grid-template-columns:200px 130px;
+             grid-template-rows: repeat(2,50px);
+             margin-top: 30px;
+             width: 50%;
+             margin-left: 24%;
+             text-align: center;
+            
+             
+         }
+         #table>div{
+             border: 1px solid rgb(216, 173, 94);
+             padding: 12px;
+            }
+            #product{
+                display: grid;
+                grid-template-rows: 700px 740px 700px ;
+                grid-template-columns: 1;
+                height: 2300px;
+                gap: 20px;
+                
+            }
+            #product>div{
+border: 2px solid lightgrey;padding: 15px;
+
+            }
+            #product>div>img{
+                width:300px;
+                height: 42%;
+                margin-left: 35%;
+                margin-top: 5%;
+            }
+
+            #iframe{
+ display: grid;
+ grid-template-columns: repeat(2,250px);
+ height: 300px;
+ border: 1px solid none;
+ margin-top: 0px;
+ margin-left: 26%;
+ gap: 20px;
+            }
+#iframe>div{
+  border: 10px solid lightgrey;
+ padding: 5px;
+
+ } 
+                        
+iframe{
+
+height: 250px;
+ width: 250px;
+  }
+
+#offer{
+height: 300px;
+background-color: wheat;
+margin-left: -15%;
+text-align: center;
+padding: 10px;
+margin-right: -18%;
+margin-top: -40px;
+margin-bottom: 20px;
+}
+#offer>img{
+height: 170px;
+}
+
+button{
+    margin-top: 150px;
+    height: 50px;
+    width: 200px;
+    margin-left: 42%;
+    background-color: tomato;
+    border: tomato;
+}
+
+#bottom{
+    margin-top: 50px;
+    height: 150px;
+
+
+text-align: center;
+background-color: rgb(73, 69, 69);
+padding: 20px;
+border-top: 5px solid tomato;
+color: white;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+
+            @media screen and (min-width:0px) and (max-width:720px){
+                
+
+                #product>div>img{
+                width:300px;
+                height: 42%;
+                margin-left: 17.5%;
+                margin-top: 5%;
+            }
+            #product{
+                display: grid;
+                grid-template-rows: 820px 830px 760px ;
+                grid-template-columns: 1;
+                height: 2300px;
+                gap: 20px;
+            
+                
+            }
+ #offer{
+height: 300px;
+background-color: wheat;
+margin-top: 180px;
+margin-left: -70px;
+text-align: center;
+padding: 10px;
+margin-right: -85px;
+margin-bottom: 30px;
+}
+
+
+#iframe{
+ display: grid;
+ grid-template-columns: repeat(2,250px);
+ height: 300px;
+ border: 1px solid none;
+ margin-top: 0px;
+ margin-left: 1%;
+ gap: 20px;
+            }
+            
+button{
+    margin-top: 150px;
+    height: 50px;
+    width: 135%;
+    margin-left:-28%;
+    
+  background-color: tomato;
+  position: fixed;
+  bottom: 0;
+}
+
+#bottom{
+    margin-top: 150px;
+    height: 150px;
+margin-bottom: 49px;
+margin-right: -10px;
+margin-left: -10px;
+text-align: center;
+background-color: rgb(73, 69, 69);
+padding: 20px;
+border-top: 5px solid tomato;
+color: white;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+            }
+    </style>
+
+</head>
+<body>
+
+    <div id="a" style="margin-left: 10%;">
+    <div>
+       <a href="index.html"> <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/logo.svg?v=1585630376"> 
+       </a>
+    </div>  
+    <div id="name" style="margin-top: 30px;">
+        <p style="font-size:18px;" id="p1"></p>
+        <p>This is Dr. Zeel Gandhi, Expert Ayurvedic Formulator at Vedix. I’ll be taking you through your skin analysis.</p>
+        <p id="p2" style="font-size: 25px;margin-left: 24%;"></p>    
+        <div style="height: 4px; width: 100px; background-color: tomato;margin-left: 24%;"></div>
+       <div id="table" style="margin-bottom: 50px;">
+<div>Skin Type</div>
+<div id="type"></div>
+<div >Skin Issue</div>
+<div id="issue"></div>
+       </div>
+<p>You have identified Tan as your primary skin concern. Based on the analysis of your dosha profile, your skin’s characteristics and your lifestyle, here is the recommended 3-step customised Ayurvedic skincare regimen formulated with 20+ natural handpicked ingredients and 0 harmful chemicals, best suited for Tan.</p>
+<p>The 3 product customised Ayurvedic regimen comes with the Cleanser, Face serum and Moisturiser for all-around care for your skin.</p>
+
+    </div>
+    
+    
+    <div>
+        <p id="p3" style="font-size: 25px;"></p>
+    </div>
+    
+    <div id="product">
+<div>
+    <div style="text-align:center;">Anuva Moisturizing Face Wash</div>
+<img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/anuva-analysis.jpg?v=1639463063">
+<p> CLEANSE With India’s First Non- Synthetic Saponin-Based Cleanser. </p>
+<ul>
+    <li>
+        Clears impurities from the skin
+    </li>
+    <li>
+        Hydrates and replenishs natural oils
+    </li>
+    <li>
+        A very mild formula perfect for dry and sensitive skin
+    </li>
+</ul>
+
+
+<p>Made with natural and traditionally proven essentials that work, such as:</p>
+<p>Aloe Indica (Kumari)is rich in moisturizing properties thathelps keep your skin dewy. It makes your skin more elastic and less wrinkled. </p>
+<p>Oatmeal(Yava bheda) has multiple benefits.Its antioxidant and anti-inflammatory properties help to treat dry skin and remove dead skin cells.</p>
+<p>No Alcohol, Oil, Silicones,Sulfates, Parabens!</p>
+
+
+</div>
+
+<div>
+<p style="text-align:center;">Aloka VC Brightening Face Serum</p>
+<img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/Aloka_VC.png?v=1608730408">
+
+<p>ADDRESS your tanning issues with a SLS & Paraben-free face serum</p>
+<ul>
+    <li>
+        Protects the skin from harmful UV
+    </li>
+    <li>
+        Evens out skin tone
+    </li>
+
+    <li>
+        Helps fade blemishes
+    </li>
+</ul>
+
+<p>Ayurvedic essentials in the serum that make it unique for you are:</p>
+<p>Emblica Officinalis (Amalaki) rich in vitamin C Amla helps to brighten, tone and soften. It reduces free radicals thus controlling ageing or dryness.</p>
+<p>
+    Citrus Limon (Jambira)is a rich & natural source of vitamin C which helps in skin lightening.
+</p>
+<p>
+    Glycyrrhiza Glabra (Yashtimadhu) has been traditionally used for healing skin wounds. It protects the skin against oxidative stress injuries and improves overall skin quality.
+</p>
+
+</div>
+
+<div>
+<p style="text-align:center;">Sthavi HydroPlenish Moisturizing Face Cream</p>
+<img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/Sthavi.png?v=1608730426">
+<p>
+
+    MOISTURIZE your face & strengthen your skin’s barrier with this customised 100% Ayurvedic moisturizer</p>
+
+<ul>
+    <li>Keeps skin hydrated</li>
+    <li>Restores skin barrier</li>
+    <li>Protects against UVA & UVB rays</li>
+</ul>
+
+<p>
+    Proven to help restore skin barrier, the following ingredients makes it ideal for everyday use:
+</p>
+<p>
+    Vetiveria Zizanioides(Usheera) has antioxidant properties, which keeps your skin young by protecting it from free radicals that cause aging signs. 
+</p>
+<p>
+    Nelumbo Nucifera (Kamala) is rich in anti-bacterial properties. It reduces acne generated heat on the skin, reduces pigmentation, improves overall complexion and texture of the skin.
+</p>
+
+
+
+</div>
+    </div>
+    <div id="offer">
+        <p style="font-size: 20px; font-weight: 600;" >Choose A Plan That’s Right For You</p>
+        <p>Extra 20% OFF With Vedix Insider Membership</p>
+        <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/vx-3-skin.png?v=1639123636">
+    </div>
+    <div id="iframe">
+        
+    </div>
+
+<button onclick="window.location.href='product1.html'">BUY NOW</button>
+    </div>
+<div id="bottom">
+    <p>
+        WhatsApp: +914071434363  
+    </p>
+    <p> Terms of Use Privacy Policy|Cookie Policy|Content Policy|Offers And Coupons Refunds & Cancellations </p>
+    <p>Become An Affiliate</p>
+    <p>Copyright © 2022. </p>
+</div>
+</body>
+</html>
+<script src="comp.js"></script>

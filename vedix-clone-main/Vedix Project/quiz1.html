@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#a{
+    border: 1px solid none;
+    margin-left: 30%;
+    width: 40%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: .7px;
+    
+}
+#b{
+border: 1px solid none;
+display: grid;
+width: 70%;
+margin-left: 15%;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(2,47px);
+gap: 10px;
+height: 180px;
+border-bottom: 1px solid lightgrey;
+
+}
+#b>button{
+    border: 1px solid lightgrey;
+    border-radius: 4%;
+    font-size: 13px;
+    padding: 11px;
+    background-color: white;
+    
+}
+#c{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100px;
+    width: 50%;
+    margin-left: 24%;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+#c>button{
+    height: 42px;
+    border: 1px solid lightgrey;
+    padding:9px;
+    background-color: white;
+
+    border-radius: 5px;
+}
+#d{
+    height: 170px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,45px);
+    width: 60%;
+    margin-left: 18%;
+    margin-top: 40px;
+    gap: 10px;
+    font-size: 13px;
+  
+}
+#d>button{
+    border:1px solid lightgrey;
+    padding: 11px;
+    border-radius: 5px;
+    background-color: white;
+}
+#e{
+    display: grid;
+grid-template-columns: 1;
+grid-template-rows: repeat(2,50px);
+gap: 10px;
+width: 80%;
+margin-left: 11%;
+margin-top: 40px;
+height: 170px;
+border-bottom: 1px solid lightgrey;
+   
+}
+
+
+
+#f,#g ,#h{
+display: grid;
+grid-template-columns: 1;
+grid-template-rows: repeat(4,50px);
+gap: 10px;
+width: 80%;
+margin-left: 11%;
+margin-top: 40px;
+height: 280px;
+border-bottom: 1px solid lightgrey;
+
+}
+#e>button{
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+#f>button{
+background-color: white;
+border: 1px solid lightgrey;
+border-radius: 5px;
+}
+#g>button{
+background-color: white;
+border: 1px solid lightgrey;
+border-radius: 5px;
+
+}
+#h>button{
+background-color: white;
+border: 1px solid lightgrey;
+border-radius: 5px;
+
+}
+
+
+
+@media screen and (min-width:0px) and (max-width:720px){
+   
+    
+    #a{
+    border: 1px solid none;
+    margin-left: 13%;
+    width: 80%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 60px;
+    letter-spacing: .7px;
+
+}
+
+#a>div{
+    border: 1px solid none;
+}
+
+}
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/logo.svg?v=1585630376">
+        </div>
+<div>
+    <p>Enter Your Name</p>
+</div>
+<div style="height: 90px; border-bottom: 1px solid lightgrey;">
+<input style="border: 1px solid rgb(211, 207, 207); height: 40px;background-color: rgb(241, 235, 235); width: 80%;" id="name" type="text" placeholder="Your Name"> 
+</div>
+<div>
+    <p>Select Your Age</p>
+</div>
+<div id="b">
+<button onclick="clorChange()" class="bu1">12-18</button>
+<button onclick="clorChange1()" class="bu2">18-25</button>
+<button onclick="clorChange2()" class="bu3">26-35</button>
+<button onclick="clorChange3()" class="bu4" >36-45</button>
+<button onclick="clorChange4()" class="bu5">46-55</button>
+<button onclick="clorChange5()" class="bu6">55+</button>
+</div>
+<div style="margin-top: 20px;margin-bottom: 10px;">
+    Select Your Gender
+</div>
+<div id="c" style="border-bottom: 1px solid lightgrey;margin-bottom: 25px;">
+<button onclick="clorChange6()" class="bu7"> Male</button>
+<button onclick="clorChange7()" class="bu8">Female</button>
+</div>
+<div>
+    What problem with skin concerns you most?  
+</div>
+<div id="d" style="border-bottom: 1px solid lightgrey;">
+<button onclick="clorChange8()" id="bu9">Acne</button>
+<button onclick="clorChange9()"id="bu10">Dark spots</button>
+<button onclick="clorChange10()"id="bu11">Tan</button>
+<button onclick="clorChange11()"id="bu12">Aging</button>
+</div>
+<div style="margin-top: 40px;">
+    Skin Profile
+</div>
+<div>
+    Is the tanning even on your face and neck?
+</div>
+<div id="e">
+<button onclick="clorChange12()"id="bu13">Yes</button>
+<button onclick="clorChange13()"id="bu14">No</button>
+</div>
+<div style="margin-top: 40px;">
+    How does your skin respond to the sun?
+</div>
+<div id="f" >
+<button onclick="clorChange14()"id="bu15">Tans easily</button>
+<button onclick="clorChange15()"id="bu16">My skin turns red quickly</button>
+<button onclick="clorChange16()"id="bu17">Does not tan easily</button>
+</div>
+<div style="margin-top: 40px;"> 
+    What is your skin type?
+</div>
+<div id="g">
+    <button onclick="clorChange21()"id="bu22">Dry</button>
+    <button onclick="clorChange22()"id="bu23">Oily</button>
+    <button onclick="clorChange23()"id="bu24">Normal</button>
+    <button onclick="clorChange24()"id="bu25">Sensitive to light and products</button>
+</div>
+<div style="margin-top: 40px;">
+    What does your skin usually feel like at Midday?   
+</div>
+<div id="h" style="border-bottom: 1px solid lightgrey;">
+    <button onclick="clorChange17()"id="bu18">Fresh and well hydrated</button>
+    <button onclick="clorChange18()"id="bu19">Smooth and bright</button>
+    <button onclick="clorChange19()"id="bu20"> Neither smooth nor rough</button>
+    <button onclick="clorChange20()"id="bu21">Rough and dull</button>
+</div>
+<button onclick="com() " style="height: 50px; width: 120px;margin-top: 40px; margin-left: 70%;background-color: rgb(226, 130, 95);letter-spacing: 1px;font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: white;font-weight: 600;border: 1px solid white;">COMPLETE</button>
+    </div>
+</body>
+</html>
+<script src="quiz1.js"></script>

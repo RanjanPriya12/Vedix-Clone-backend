@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <style>
+         #login-container {
+             text-align: center;
+             margin: 40px;
+             width: 500px;
+             height: 500px;
+             margin: auto;
+             
+         }
+         #login-navbar {
+             text-align: left;
+             margin-top: 20px;
+             font-size: 1.5em; 
+             margin-left: 95px;
+         }
+         .login-input {
+             font-size: 1em;
+             height: 45px;
+             width:400px;
+             margin-top: 20px;
+             border: 1px lightgray;
+             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+         }
+         .login-input:hover {
+             font-size: 1em;
+             height: 45px;
+             width:400px;
+             margin-top: 20px;
+             border: 1px orange;
+             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+             border-radius: 2%;
+         }
+         .login-input+input[type='submit'] {
+            height: 40px;
+            font-size: 1.1em;
+             width:400px;
+             margin-top: 20px;
+             color: white;
+             background-color: rgb(247, 123, 123);
+             border: none;
+         }
+         .login-input+input[type='submit']:hover {
+            height: 45px;
+            font-size: 1.1em;
+             width:400px;
+             margin-top: 20px;
+             color: white;
+             background-color: rgb(247, 158, 158);
+             border: none;
+         }
+         #login-box {
+             display: flex;
+             justify-content: space-around;
+         }
+         
+         .login-social i{
+            font-size:30px;
+            margin:8px;
+            padding:5px;
+
+         }
+    </style>
+</head>
+<body>
+    <form> <div id="login-navbar">
+       <a href="index.html"> <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/logo.svg?v=1585630376"></a>
+    </div>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form>
+        <input class="login-input"  id="email" type="email" placeholder="Email" size="30"/>
+        <input class="login-input"  id="password" type="password" id="pass" name="password" placeholder="Password"
+        minlength="8" required/>
+        <input class="login-input" type="submit" value="login"/>
+    </form>
+        <br>
+        <br>
+        <div id="login-box">
+            <div onclick="window.location.href='signup.html'">New User?</div>
+            <div class="forgotpassword">Forgot Password?</div>
+        </div>
+        <br>
+        <br>
+        <hr width="80%">
+        <br>
+        <h3>Continue with</h3>
+        <br>
+        <div class="login-social">
+            <i  class="fab fa-facebook" ></i>
+            <i  class="fab fa-google" ></i>
+        </div>
+    </div>
+</form>
+   
+</body>
+</html>
+
+<script>
+
+document.querySelector("form").addEventListener('submit', login);
+async function login(event){
+    event.preventDefault();
+    try {
+
+        let login_data = {
+           
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value
+
+        }
+
+        login_data = JSON.stringify(login_data);
+
+        console.log(login_data);
+        let url = `http://localhost:5000/login`;
+
+        let res = await fetch(url, {
+            method: 'POST',
+            body: login_data,
+            headers: {
+                "Content-Type": 'application/json',
+            }
+        });
+        console.log("hello");
+        let data = await res.json();
+        console.log("data:", data);
+        if(data.token){
+            window.location.href="index.html";
+        }
+       else{
+           
+           alert("Wrong email or password");
+       }
+    }
+    catch (error) {
+        alert("Wrong email or password");
+        console.log("error:", error.message);
+    }
+
+};
+
+ 
+
+</script>

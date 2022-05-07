@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles/footer.css"/>
+    <link rel="stylesheet" href="styles/blog.css"/>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main-content">
+       
+        <h1>A Guide To Ayurvedic Lifestyle & Wellness</h1>
+        <div>
+            <div class="blog-content">
+                   <h2>Namaste from the Vedix Team.</h2> 
+                   <p>
+                    Our blog’s aim is to help you understand and apply Ayurveda in your daily life for better hair, skin and health. We<br>
+                    are very passionate about educating you on natural ways to solve common lifestyle problems through dosha-<br>
+                    specific herbs. Plus, every article you read is reviewed by our Ayurvedic doctor for accuracy.
+                   </p> 
+            </div>  
+            
+            <div class="blog-main-container">
+            <input type="text" placeholder="search"/>
+
+            <div class="blog-sub-container">
+
+                <div class="flex">
+                    <div class="img-div">
+                    <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/articles/woman-getting-face-massage-at-spa_400x400_crop_center.jpg?v=1644933699"/>
+                    </div>
+                    <div class="content-div">
+                        <p>How To Do Facial Massage Step-By-Step & What Are Its Benefits?</p>
+                        <p>Isn't facial massages a part of your skincare routine yet? Then you might be missing out on some of the...</p>
+                       <span class="spanColor"><p>Read more</p></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="img-div">
+                    <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/articles/woman-applying-niacinamide-on-her-face_400x400_crop_center.jpg?v=1644924996"/>
+                    </div>
+                    <div class="content-div">
+                    <p>How To Use Niacinamide For All Your Skin Problems?</p>
+                    <p>Are you looking for an ingredient that can reverse most of your skin issues? The essential vitamin niacinamide might be...</p>
+                   <span class="spanColor"><p>Read more</p></span>
+                   </div>
+                </div>
+                <div class="flex">
+                    <div class="img-div">
+                    <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/articles/teenager-applying-cream-on-her-face_400x400_crop_center.jpg?v=1644844152"/>
+                    </div>
+                    <div class="content-div">
+                    <p>How To Fight Skin Issues In Teenagers + Useful & Quick Tips</p>
+                    <p>Did you know that acne, dry skin and blackhead issues are common during teenage years? Experts believe that a good...</p>
+                   <span class="spanColor"><p>Read more</p></span>
+                </div>
+                </div>
+                <div class="flex">
+                    <div class="img-div">
+                    <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/articles/Raised-red-bumps-and-blisters-caused-by-shingles-on-skin_400x400_crop_center.jpg?v=1644836698"/>
+                    </div>
+                    <div class="content-div">
+                    <p>Common Skin Lesions: Types, Causes, Symptoms & Treatments</p>
+                    <p>Have you noticed abnormal changes in any area of your skin compared to its surrounding skin tissue? It's nothing but...</p>
+                   <span class="spanColor"><p>Read more</p></span>
+                </div>
+                </div>
+                <div class="flex">
+                    <div class="img-div">
+                        <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/articles/pretty-woman-holding-pair-tweezers_400x400_crop_center.jpg?v=1644310099"/>
+                    </div>
+                    <div class="content-div">
+                    <p>How To Remove Facial Hair Naturally?</p>
+                    <p>Is removing facial hair a painful process every time? Ayurveda suggests natural herbal remedies that can minimize facial hair growth...</p>
+                   <span class="spanColor"><p>Read more</p></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="img-div">
+                        <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/articles/little-girl-scratching-itch-hand_400x400_crop_center.jpg?v=1644249986"/>
+                    </div>
+                    <div class="content-div">
+                    <p>Psoriasis Vs Eczema: How To Identify & Treat Them?</p>
+                    <p>Do you experience intense itching and irritation on your skin often? Are there scaly red patches too? The underlying reason...</p>
+                   <span class="spanColor"><p>Read more</p></span>
+                </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <div class="page-number">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>...</p>
+            <p>59</p>
+            <p>Next</p><i class="fas fa-angle-double-right"></i>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+</html>
+<script type="module">
+import footer from "./components/footer.js";
+
+let footer_bottom = document.querySelector("#footer");
+footer_bottom.innerHTML=footer();
+
+</script>

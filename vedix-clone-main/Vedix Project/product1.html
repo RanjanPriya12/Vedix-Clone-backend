@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-main-container</title>
+    <link rel="stylesheet" href="styles/product1.css"/>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <style>
+ #product-wrapper-container{
+    width:100%;
+    margin:auto;
+    right:0;
+    left:0;
+    background-color:#eeeef0;
+}
+.nav-wrapper-p{
+    display: flex;
+    width:50%;
+    justify-content: center;
+    gap:6%;
+    margin:auto;
+}
+.inner-content-p1:hover{
+    border-bottom:5px solid lightcoral;
+    color:lightcoral;
+    transition: 0.5s;
+}
+.inner-content-p2:hover{
+    border-bottom:5px solid lightcoral;
+    color:lightcoral;
+    transition: 0.5s;
+}
+.cart{
+    display: flex;
+    justify-content: space-around;
+    width:60px;
+    align-items: center;
+}
+#cart-count{
+    font-size:20px;
+}
+    </style>
+</head>
+<body>
+    <div id="product-main-container">
+        <div id="nav">
+            <div id="nav1">
+         <div>
+            <p>
+                Order Now & Get Assured Dispatch In 24hrs
+            </p>
+            <button id="navbutton">
+            <a href="allproduct.html" style="text-decoration:none;color:black;">
+            Order Now
+            </a>
+            </button>
+         </div>
+            </div>
+            <div id="nav2">
+                <div>
+                <a href="index.html" style="text-decoration:none;color:black;">
+                    <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/logo.svg?v=1585630376">
+                </a>
+                    </div>
+                <div>
+                    <p id="quiz1">
+                    <a href="quiz1.html" style="text-decoration:none;color:black;">
+                    Know Your Skin
+                    </a>
+                    <i class="fas fa-angle-right"></i>
+                </p>
+                </div>
+                <div>
+                    <p id="quiz2">
+                    <a href="comp.html" style="text-decoration:none;color:black;">
+                    Your Skin Analysis
+                    </a>
+                    <i class="fas fa-angle-right"></i>
+                </p>
+                </div>
+                <div class="cart" >
+                <a href="#" style="text-decoration:none;color:black;">
+               <img class='cart-icon' src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/cart_icon_93f3b819-aa16-479e-b6ba-c5007e8520d2.png?v=1623129140">
+             </a>
+             <div>
+              <p id="cart-count"></p>  
+            </div>
+               </div>
+         
+         <div class="lock">
+         <a href="login.html" style="text-decoration:none;color:black;">
+            <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/signin-lock.png?v=1623746079">
+         </a>
+            </div>
+         </div>
+            </div>
+       
+        <div id="product-wrapper-container">
+            <div class="nav-wrapper-p">
+                <div class="inner-content-p1">
+                   <p onclick="window.location.href='product.html'">All Products</p>
+                </div>
+                <div class="inner-content-p2">
+                    <p onclick="window.location.href='product1.html'">Super Saver Combos</p>
+                </div>
+            </div>
+        </div>
+      <div id="product-combo-image">
+          <img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/collections/value-combos_1200x_badf481c-2ba1-43b9-ad23-9164a8bae1a8_1200x.png?v=1634725205" />
+      </div>
+      <div id="product-container-f">
+      </div>
+    </div>
+    <div class="cart-sidebar">
+        <div class="cart-title-s">
+          <h2>Your Cart</h2>
+          <a href="cart.html" class="cart-tag-s"><button>Go to cart</button></a>
+        </div>
+      <div class="close-cart"><i class="fas fa-times"></i></div>
+        <div class="sub-cart-content">
+        </div>
+        <div class="inner-bottom-content-s">
+             <div class="inner-flex-s">
+                 <p id="totalDisplay"></p>
+                 <button onclick="window.location.href='checkout.html'">CHECKOUT</button>
+             </div>
+             <div class="inner-check-s">
+                 <a href="">Continue Shopping</a>
+                 <span class="icon-next-s"><i class="fas fa-angle-double-right"></i></span>
+             </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="data.js"></script>
+<script type="module" src="product1.js">
+    //import refreshCartCount from 'product1.js';
+</script>

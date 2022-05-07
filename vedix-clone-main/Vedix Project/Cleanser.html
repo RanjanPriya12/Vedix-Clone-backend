@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanser Page</title>
+    <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/filter.css">
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <script src="./scripts/filter.js"></script>
+    <link rel="stylesheet" href="./styles/navbar.css">
+</head>
+
+<body>
+    <div id="sidebar"></div>
+    <div id="main">
+
+        <header id="navbar"></header>
+
+        <div id="search">
+        </div>
+        <div class="image">
+            <div>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/Valentine_s-Day_Flash-Sale-banner.jpg?v=1644837074"
+                        alt="pic4"></a>
+            </div>
+        </div>
+        <div id="FaceClean" class="style"></div>
+    </div>
+</body>
+
+</html>
+<script type="module">
+    import { searchfunction, appendProduct } from './scripts/product.js';
+    import { display, show, filterProduct } from './scripts/filter.js';
+    import navbar1 from './scripts/navbar1.js'
+
+
+    let navbar_cont = document.getElementById('navbar');
+    navbar_cont.innerHTML = navbar1();
+
+    let cont = document.getElementById('search');
+    cont.innerHTML = searchfunction();
+
+
+    let arr = JSON.parse(localStorage.getItem('Product'));
+    let Face_Arr = arr.filter((ele) => {
+        if (ele.category == 'facemask') {
+            return ele;
+        }
+    });
+    let Face_cont = document.getElementById('FaceClean');
+    appendProduct(Face_Arr, Face_cont);
+
+
+
+    /*=============================Sidebar Filtering And Getting Data===========================*/
+
+    let filter_div = document.getElementById('sidebar');
+
+    let filter_button = document.getElementById('filter');
+
+    let ProductList = JSON.parse(localStorage.getItem('Product'));
+    filter_button.addEventListener('click', (FilterFunction) => {
+        filter_div.innerHTML = display();
+        show(filter_div);
+        let fasicon = document.querySelector('.fas');
+        fasicon.addEventListener('click', () => {
+            filter_div.style.display = 'none';
+        });
+        let genderValue;
+        let radios = document.querySelectorAll('input[type=radio][name="radio"]');
+        radios.forEach(radio => radio.addEventListener('change', () => {
+            genderValue = (radio.value);
+
+        }));
+
+        let Product_type;
+        let Radios = document.querySelectorAll('input[type=radio][name="product"]');
+        Radios.forEach(Radio => Radio.addEventListener('change', () => {
+            Product_type = (Radio.value);
+        }));
+
+        document.getElementById('apply').addEventListener('click', () => {
+            filterProduct(ProductList, genderValue, Product_type);
+            window.location.href = 'filteredProduct.html';
+
+        })
+    });
+
+
+
+
+    /*================================Search Functionality===============================*/
+
+
+
+    let input = document.getElementById('searchbar');
+    input.addEventListener('keypress', (event) => {
+        if (event.key == 'Enter') {
+            let input_val = document.getElementById('searchbar').value;
+            console.log(input_val)
+            if (input_val == 'oil' || input_val == 'hair oil' || input_val == 'Hair oil' || input_val == 'hair') {
+                window.location.href = 'HairOil.html';
+            }
+            else if (input_val == 'shampoo') {
+                window.location.href = 'Shampoo.html';
+            }
+            else if (input_val == 'hair scrum' || input_val == 'Hair Scrum') {
+                window.location.href = 'HairScrum.html';
+            }
+            else if (input_val == 'conditioner' || input_val == 'hair conditioner') {
+                window.location.href = 'HairCond.html';
+            }
+            else if (input_val == 'mask' || input_val == 'hair mask' || input_val == 'face_mask') {
+                window.location.href = 'HairPack.html';
+            }
+            else if (input_val = 'cleanser' || input_val == 'face cleanser') {
+                window.location.href = 'Cleanser.html';
+            }
+            else if (input_val == 'face serum') {
+                window.location.href = 'FaceSerum.html';
+            }
+            else if (input_val == "") {
+                alert('Enter product name to search');
+            }
+            else {
+                alert('Ops Product is not found');
+            }
+        }
+    });
+</script>

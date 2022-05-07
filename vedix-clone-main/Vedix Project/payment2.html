@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+    <link rel="stylesheet" href="payment2.css" >
+
+</head>
+<body>
+    <div id="container_sh">
+        <div id="left_sh">
+            <div><a href="index.html"><img src="https://cdn.shopify.com/s/files/1/0037/7690/5283/files/logo.svg?v=1585630376" alt="Vedix" itemprop="logo"></a></div>
+            <div><p class="p1_sh"><span class="spn_sh">Cart > Information > Shipping</span> > Payment</p></div>
+
+            <div id="conct_ship_sh">
+                <div id="contact_sh">
+                    <div class="ship1_sh">Contact</div>
+                    <div id="cont_sh"><p></p></div>
+
+                    <div class="change_sh">Change</div>
+                </div>
+               <div class="div_sh"></div>
+               
+                <div id="ship_sh">
+                    <div class="ship1_sh">Ship to</div>
+                    <div id="cont1_sh"><p></p></div>
+
+                    <div class="change_sh">Change</div>
+                </div>
+                <div class="div_sh"></div>
+                <div id="ship_sh">
+                    <div class="ship1_sh">Method</div>
+                   
+                    <div class="span2_sh">Free</div>
+                </div>
+            </div>                 
+            
+            <div class="payment_sh">Payment</div>
+            <div class="all_sh"><p>All transactions are secure and encrypted.</p></div>
+        
+            
+            <div id="container_pa">
+                <div>
+                 <div class="razor_sh"><img src="https://cdn.shopify.com/s/files/applications/e273f27d4c4fa65fc8e2af05e552f04e.png?height=24&1637057371" alt=""></div>  
+                 <div class="visa_sh"><i class="fa-brands fa-cc-visa"></i></div>
+                 <!-- <i class="blank-slate__icon icon icon--offsite"></i> -->
+                 <div class="after_sh"><p>After clicking “Complete order”, you will be redirected to Razorpay (Cards, UPI, NetBanking, Wallets, Paypal) to complete your purchase securely.</p></div>
+                 <div  class="radio1_sh"><input type="radio"> Cash on Delivery (COD)</div>
+                </div>
+                
+            </div>
+            <div class="shiping_sh"><p>Billing Address</p></div> 
+            <form>
+            <label  class="standard_sh">
+                <div class="radio2_sh"><input type="radio" >Same as shipping address</div>
+                <br>
+               <div  class="radio3_sh"> <input type="radio">Use a different billing address</div>
+                
+            </label>
+            </form>
+ 
+        <div id="container2_sh">
+            <div class="return_sh" onclick="window.location.href='shipping.html'">Return to Shipping</div>
+            <div><button class="button_sh" onclick="window.location.href='order.html'">Complete Order</button></div>
+            
+         </div>
+         <div><p>All rights reserved Vedix</p></div>
+        </div> 
+
+                <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>right side>>>>>>>>>>>>>>>>>>> -->
+                <div id="right_c">
+                    <div style="display: flex; justify-content: space-between;">
+                        <input class="input3_c" type="text" placeholder="Discount code"/> 
+                        <button class="apply_c">Apply</button>
+                    </div>
+
+                    
+                    <div class="subtotal_c" style="display: flex; justify-content: space-between;">
+                        <div>Subtotal </div>
+                        <div id="total"></div>
+                    </div>
+                    
+    
+                    <div id="shiping_c">
+                        <div>Shipping</div>
+                        <div>Free</div>
+                    </div>
+    
+                    <div id="totl_inr_c" >
+                        <div class="total_c">Total </div>
+                        <div id="total1"></div>
+                        
+                    </div>
+            </div>
+    </div>
+
+</body>
+</html>
+<script>
+    var address=JSON.parse(localStorage.getItem('address'))
+    var phone=JSON.parse(localStorage.getItem('phnumber'))
+    var s=document.querySelector('#cont_sh')
+    s.innerHTML=phone;
+    console.log(address,phone)
+
+    var p=document.querySelector('#cont1_sh')
+    p.innerHTML=address;
+
+
+
+   let price=document.getElementById('total');
+let total2=JSON.parse(localStorage.getItem('price'));
+console.log(total2);
+price.textContent=total2;
+
+let totalAmout=document.getElementById('total1');
+totalAmout.style.marginTop='20px';
+totalAmout.innerHTML=`INR ${total2}`;
+
+//    var t= JSON.parse(localStorage.getItem('price'))
+   document.querySelector("#total1_c").textContent=t
+
+</script>
